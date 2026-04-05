@@ -11,7 +11,7 @@ export function Hero() {
             alt="Heliotropic"
             width={1200}
             height={393}
-            className="-mt-[3.6rem] -mb-[4.5rem] -ml-[5.25rem] block h-[18rem] w-auto max-w-full [clip-path:inset(20%_0_25%_0)] object-left object-top drop-shadow-[0_3px_32px_rgba(0,0,0,0.32)] transition-transform duration-300 ease-out motion-reduce:transition-none sm:-mt-[4.35rem] sm:-mb-[5.4375rem] sm:h-[21.75rem] lg:-mt-[5.4rem] lg:-mb-[6.75rem] lg:h-[27rem] xl:-mt-[6.15rem] xl:-mb-[7.6875rem] xl:h-[30.75rem] hover:scale-[1.02] motion-reduce:hover:scale-100"
+            className="-mt-6 -mb-8 ml-0 block h-auto w-full max-w-[min(100%,288px)] max-sm:object-contain [clip-path:inset(20%_0_25%_0)] object-left object-top drop-shadow-[0_3px_32px_rgba(0,0,0,0.32)] transition-transform duration-300 ease-out motion-reduce:transition-none sm:-mt-[4.35rem] sm:-mb-[5.4375rem] sm:-ml-[5.25rem] sm:h-[21.75rem] sm:w-auto sm:max-w-full lg:-mt-[5.4rem] lg:-mb-[6.75rem] lg:h-[27rem] xl:-mt-[6.15rem] xl:-mb-[7.6875rem] xl:h-[30.75rem] hover:scale-[1.02] motion-reduce:hover:scale-100"
             decoding="async"
           />
         </a>
