@@ -25,7 +25,7 @@ export function Footer() {
           </p>
         </div>
         <p className="text-xs text-white/45">
-          © {year} Heliotropic Limited. All rights reserved.
+          © {year} Heliotropic Heat Systems Limited. All rights reserved.
         </p>
       </div>
     </footer>
