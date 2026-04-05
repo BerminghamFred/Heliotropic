@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/*
+ * Cygre — headings. Add WOFF2 files to /public/fonts/ (see filenames below)
+ * or install the family locally. Falls back to system UI if files are absent.
+ */
+@font-face {
+  font-family: "Cygre";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Cygre Book"),
+    local("Cygre"),
+    url("/fonts/Cygre-Book.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cygre";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local("Cygre SemiBold"),
+    local("Cygre Semibold"),
+    url("/fonts/Cygre-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cygre";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Cygre Bold"), url("/fonts/Cygre-Bold.woff2") format("woff2");
+}
+
+@theme {
+  --color-heli-deep: #1a4e66;
+  --color-heli-deep-muted: #2a5f78;
+  --color-heli-orange: #e26d35;
+  --color-heli-orange-hover: #c95a28;
+  --color-heli-canvas: #f4f7f8;
+  --color-heli-surface: #ffffff;
+  --color-heli-pipe: #2d6a82;
+
+  --font-heading: "Cygre", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Open Sauce Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-heli-deep font-body text-white antialiased;
+  }
+
+  ::selection {
+    @apply bg-white/20 text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-hero-1 {
+    animation: fade-in-up 0.75s ease-out both;
+  }
+
+  .animate-hero-2 {
+    animation: fade-in-up 0.82s ease-out 0.08s both;
+  }
+
+  .animate-hero-2-delayed {
+    animation: fade-in-up 0.82s ease-out 0.18s both;
+  }
+
+  .animate-hero-3 {
+    animation: fade-in-up 0.88s ease-out 0.16s both;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-1,
+  .animate-hero-2,
+  .animate-hero-2-delayed,
+  .animate-hero-3 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Capillary “liquid” motion — slow, low-contrast so it stays atmospheric */
+.capillary-liquid--primary {
+  stroke-dasharray: 2.2 4.8 1.6 91.4;
+  stroke-dashoffset: 0;
+  animation: capillary-liquid-move 48s linear infinite;
+}
+
+.capillary-liquid--secondary {
+  stroke-dasharray: 1.2 22 0.9 75.9;
+  stroke-dashoffset: 0;
+  animation: capillary-liquid-move 68s linear infinite reverse;
+  animation-delay: -12s;
+}
+
+.capillary-liquid--glow {
+  stroke-dasharray: 2.2 4.8 1.6 91.4;
+  stroke-dashoffset: 0;
+  animation: capillary-liquid-move 48s linear infinite;
+  filter: blur(0.22px);
+}
+
+@keyframes capillary-liquid-move {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capillary-liquid--primary,
+  .capillary-liquid--secondary,
+  .capillary-liquid--glow {
+    animation: none;
+    stroke-dasharray: 100 0;
+    stroke-dashoffset: 0;
+    opacity: 0.1;
+    filter: none;
+  }
+}
