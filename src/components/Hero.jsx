@@ -1,7 +1,7 @@
 export function Hero() {
   return (
     <div className="relative mx-auto max-w-6xl px-6 pb-6 pt-8 sm:px-10 sm:pb-8 sm:pt-10 lg:px-12 lg:pb-10 lg:pt-12">
-      <div className="relative z-10 w-full max-w-3xl text-left">
+      <div className="relative z-10 w-full max-w-3xl overflow-x-clip text-left">
         <a
           href="/"
           className="mb-0 block w-max max-w-full rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-heli-orange focus-visible:ring-offset-2 focus-visible:ring-offset-heli-deep motion-reduce:animate-none animate-hero-1"
@@ -11,7 +11,7 @@ export function Hero() {
             alt="Heliotropic"
             width={1200}
             height={393}
-            className="-mt-6 -mb-8 ml-0 block h-auto w-full max-w-[min(100%,288px)] max-sm:object-contain [clip-path:inset(20%_0_25%_0)] object-left object-top drop-shadow-[0_3px_32px_rgba(0,0,0,0.32)] transition-transform duration-300 ease-out motion-reduce:transition-none sm:-mt-[4.35rem] sm:-mb-[5.4375rem] sm:-ml-[5.25rem] sm:h-[21.75rem] sm:w-auto sm:max-w-full lg:-mt-[5.4rem] lg:-mb-[6.75rem] lg:h-[27rem] xl:-mt-[6.15rem] xl:-mb-[7.6875rem] xl:h-[30.75rem] hover:scale-[1.02] motion-reduce:hover:scale-100"
+            className="-mt-6 -mb-8 -ml-[2.75rem] block h-auto w-full max-w-[min(100%,288px)] max-sm:object-contain max-sm:[clip-path:inset(20%_0_25%_9%)] sm:-mt-[4.35rem] sm:-mb-[5.4375rem] sm:-ml-[5.25rem] sm:h-[21.75rem] sm:w-auto sm:max-w-full sm:[clip-path:inset(20%_0_25%_0)] object-left object-top drop-shadow-[0_3px_32px_rgba(0,0,0,0.32)] transition-transform duration-300 ease-out motion-reduce:transition-none lg:-mt-[5.4rem] lg:-mb-[6.75rem] lg:h-[27rem] xl:-mt-[6.15rem] xl:-mb-[7.6875rem] xl:h-[30.75rem] hover:scale-[1.02] motion-reduce:hover:scale-100"
             decoding="async"
           />
         </a>
